@@ -12,7 +12,14 @@ function App() {
     e.preventDefault();
 
     const baseUrl = import.meta.env.VITE_REACT_APP_API_BASE_URL + '/transaction' ;
-    console.log(baseUrl);
+
+    fetch(baseUrl, {
+
+      method: 'POST',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify({ name, datetime, description }),
+
+    }).then( (res)=> res.json().then( (data)=> console.log(data) ) );
 
   }
 
