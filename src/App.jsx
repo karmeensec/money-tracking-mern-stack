@@ -7,14 +7,14 @@ function App() {
 
   return (
 
-    <div className='app'>
+    <div className='app'> 
 
       <h1> Balance: $500 <span>.00</span> </h1>
 
       <form>
 
         <div className='search-container'>
-          <input type="text" name="" id="" placeholder='Add your product' />
+          <input type="text" name="" id="" placeholder='Add your product' value={name} onChange={ (e)=> setName(e.target.value) } />
           <input type="datetime-local" name="" id="" />
         </div>
 
