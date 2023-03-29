@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+body {
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.app {
+
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 2rem;
+    border-radius: .4rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin: 2rem 0;
+}
+
+form input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: .2rem;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+.search-container {
+    display: flex;
+    gap: 4rem;
+}
+
+.description-container input {
+    padding: 1rem;
+}
+
+button {
+    padding: .8rem 2rem;
+    margin: .5rem 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: .2rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.transactions {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 1rem;
+    border-radius: .2rem;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: .1rem solid #EBEDEF;
+}
+
+.transaction:first-child {
+    border-top: 0;
+}
+
+.product-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.description {
+    font-size: .8rem;
+}
+
+.price {
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
