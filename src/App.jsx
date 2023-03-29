@@ -17,11 +17,11 @@ function App() {
 
         <div className='search-container'>
           <input type="text" name="" id="" placeholder='Add your product' value={name} onChange={ (e)=> setName(e.target.value) } />
-          <input type="datetime-local" name="" id="" />
+          <input type="datetime-local" name="" id="" value={datetime} onChange={ (e)=> setDatetime(e.target.value) } />
         </div>
 
         <div className='description-container'>
-          <input type="text" name="" id="" placeholder='Add text' />
+          <input type="text" name="" id="" placeholder='Add text' value={description} onChange={ (e)=> setDescription(e.target.value)} />
         </div>
 
         <button type="submit">Add</button>
