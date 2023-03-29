@@ -4,6 +4,8 @@ import './App.css'
 function App() {
 
   const [name, setName] = useState('');
+  const [datetime, setDatetime] = useState('');
+  const [description, setDescription] = useState('');
 
   return (
 
