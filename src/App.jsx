@@ -3,6 +3,8 @@ import './App.css'
 
 function App() {
 
+  const [name, setName] = useState('');
+
   return (
 
     <div className='app'>
