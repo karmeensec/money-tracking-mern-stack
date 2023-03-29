@@ -7,4 +7,10 @@ app.get('/api/test', (req, res) => {
 
 });
 
+app.post('/api/transaction', (req, res) => {
+
+    res.json(req.body);
+
+});
+
 app.listen(5000);
