@@ -7,7 +7,7 @@ function App() {
 
     <div className='app'>
 
-      <h1>$500 <span>.00</span> </h1>
+      <h1> Balance: $500 <span>.00</span> </h1>
 
       <form>
 
@@ -17,7 +17,7 @@ function App() {
         </div>
 
         <div className='description-container'>
-          <input type="text" name="" id="" />
+          <input type="text" name="" id="" placeholder='Add text' />
         </div>
 
         <button type="submit">Add</button>
