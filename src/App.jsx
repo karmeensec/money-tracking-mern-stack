@@ -7,13 +7,22 @@ function App() {
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
 
+  const handleSubmit = function(e) {
+
+    e.preventDefault();
+
+    const baseUrl = import.meta.env.VITE_REACT_APP_API_BASE_URL + '/transaction' ;
+    console.log(baseUrl);
+
+  }
+
   return (
 
     <div className='app'> 
 
       <h1> Balance: $500 <span>.00</span> </h1>
 
-      <form>
+      <form onSubmit={ handleSubmit } >
 
         <div className='search-container'>
           <input type="text" name="" id="" placeholder='Add your product' value={name} onChange={ (e)=> setName(e.target.value) } />
