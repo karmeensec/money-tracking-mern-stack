@@ -28,4 +28,11 @@ app.post('/api/transaction', async (req, res) => {
 
 });
 
+app.get('/api/transactions', async (req, res) => {
+
+    await mongoose.connect('mongodb+srv://kamilisma:Aaaa1111@cluster0.tv1ehyb.mongodb.net/?retryWrites=true&w=majority');
+    const transactions = await transactionModel.find();
+    res.json(transactions);
+});
+
 app.listen(5000);
