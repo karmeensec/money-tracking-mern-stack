@@ -6,12 +6,12 @@ function App() {
   const [name, setName] = useState('');
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
-  const [transactions, setTransactions] = useState('');
+  const [transactions, setTransactions] = useState([]);
 
   useEffect( ()=> {
 
     getAllTransactions().then( (transaction)=> {
-
+      setTransactions(transaction);
     } );
 
   }, []);
@@ -76,50 +76,26 @@ function App() {
 
       <div className='transactions'>
 
-        <div className='transaction'>
+        {transactions.length > 0 && transactions.map( (transaction)=> (
 
-          <div className='left'>
+            <div className='transaction'>
 
-            <div className='product-name'>New LG Tv</div>
-            <div className='description'>Buying new Tv</div>
-          </div>
+              <div className='left'>
 
-          <div className='right'>
-            <div className='price'>$500</div>
-            <div className='datetime'>06/12/2022 17:42</div>
-          </div>
+                <div className='product-name'> {transaction.name} </div>
+                <div className='description'> {transaction.description} </div>
+              </div>
 
-        </div>
+              <div className='right'>
+                <div className={'price ' + (transaction.price < 0 ? 'red' : 'green') }> {transaction.price} </div>
+                <div className='datetime'> {transaction.datetime} </div>
+              </div>
 
-        <div className='transaction'>
+            </div>
 
-          <div className='left'>
-            
-            <div className='product-name'>New LG Tv</div>
-            <div className='description'>Buying new Tv</div>
-          </div>
+        ) ) }
 
-          <div className='right'>
-            <div className='price'>$500</div>
-            <div className='datetime'>06/12/2022 17:42</div>
-          </div>
-
-        </div>
-
-        <div className='transaction'>
-
-          <div className='left'>
-            
-            <div className='product-name'>New LG Tv</div>
-            <div className='description'>Buying new Tv</div>
-          </div>
-
-          <div className='right'>
-            <div className='price'>$500</div>
-            <div className='datetime'>06/12/2022 17:42</div>
-          </div>
-
-        </div>
+        
 
       </div>
 
