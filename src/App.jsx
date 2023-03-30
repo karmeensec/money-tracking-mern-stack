@@ -53,16 +53,29 @@ function App() {
 
   }
 
+  let balance = 0;
+
+for (const transaction of transactions) {
+  if (typeof transaction.price === 'number') {
+    balance += transaction.price;
+  }
+}
+
+
+  balance = balance.toFixed(2);
+  const fraction = balance.split('.')[1];
+  balance = balance.split('.')[0];
+
   return (
 
     <div className='app'> 
 
-      <h1> Balance: $500 <span>.00</span> </h1>
+      <h1> Balance: ${balance} <span> {fraction} </span> </h1>
 
       <form onSubmit={ handleSubmit } >
 
         <div className='search-container'>
-          <input type="text" name="" id="" placeholder='Add your product' value={name} onChange={ (e)=> setName(e.target.value) } />
+          <input type="text" name="" id="" placeholder='Add product price and name' value={name} onChange={ (e)=> setName(e.target.value) } />
           <input type="datetime-local" name="" id="" value={datetime} onChange={ (e)=> setDatetime(e.target.value) } />
         </div>
 
