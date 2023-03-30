@@ -13,13 +13,22 @@ function App() {
 
     const baseUrl = import.meta.env.VITE_REACT_APP_API_BASE_URL + '/transaction' ;
 
+    const price = name.split(' ')[0];  // grab the price (first part)
+
     fetch(baseUrl, {
 
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify({ name, datetime, description }),
+      body: JSON.stringify({ price, name: name.substring(price.length + 1), datetime, description })
 
-    }).then( (res)=> res.json().then( (data)=> console.log(data) ) );
+    }).then((res) => res.json()).then((data) =>{ 
+      
+      setName('');
+      setDatetime('');
+      setDescription('');
+      console.log('result', data); 
+    
+    })
 
   }
 
