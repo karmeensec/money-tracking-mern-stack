@@ -20,9 +20,9 @@ app.post('/api/transaction', async (req, res) => {
 
     await mongoose.connect('mongodb+srv://kamilisma:Aaaa1111@cluster0.tv1ehyb.mongodb.net/?retryWrites=true&w=majority');
 
-    const {name, datetime, description} = req.body;
+    const {price, name, datetime, description} = req.body;
 
-    const transaction = await transactionModel.create({ name, datetime, description})
+    const transaction = await transactionModel.create({price, name, datetime, description})
 
     res.json(transaction);
 
