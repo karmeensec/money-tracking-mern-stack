@@ -10,7 +10,12 @@
 }
 
 body {
-    background: linear-gradient(to right, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Created with https://www.css-gradient.com */
+    background: #F0F1E0;
+    background: -webkit-linear-gradient(top left, #F0F1E0, #FFFFF7);
+    background: -moz-linear-gradient(top left, #F0F1E0, #FFFFF7);
+    background: linear-gradient(to bottom right, #F0F1E0, #FFFFF7);
+    min-height: 100vh;
 }
 
 .app {
@@ -24,6 +29,10 @@ body {
 
 h1 {
     text-align: center;
+}
+
+h1 span {
+    font-size: 1.5rem;
 }
 
 form {
@@ -81,10 +90,12 @@ button {
 .product-name {
     font-weight: 600;
     font-size: 1.1rem;
+    margin: .5rem 0;
 }
 
 .description {
     font-size: .8rem;
+    max-width: 80%;
 }
 
 .price {
