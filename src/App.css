@@ -90,5 +90,13 @@ button {
 .price {
     text-align: right;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+}
+
+.price.red{
+    color: #943126; 
+}
+
+.price.green {
+    color: #0E6655;
 }
