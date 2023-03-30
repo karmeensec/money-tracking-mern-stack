@@ -6,11 +6,12 @@ function App() {
   const [name, setName] = useState('');
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
+  const [transactions, setTransactions] = useState('');
 
   useEffect( ()=> {
 
     getAllTransactions().then( (transaction)=> {
-      
+
     } );
 
   }, []);
