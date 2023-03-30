@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -6,6 +6,26 @@ function App() {
   const [name, setName] = useState('');
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('');
+
+  useEffect( ()=> {
+
+    getAllTransactions().then( (transaction)=> {
+      
+    } );
+
+  }, []);
+
+
+  const getAllTransactions = async function() {
+
+    const baseUrl = import.meta.env.VITE_REACT_APP_API_BASE_URL + '/transactions' ;
+
+    const res = await fetch(baseUrl);
+    const data = await res.json();
+    return data;
+    
+  }
+
 
   const handleSubmit = function(e) {
 
