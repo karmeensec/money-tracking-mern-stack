@@ -118,8 +118,6 @@ PORT=<your_server_port>
 
 ## Feedback
 
-If you have any feedback, please reach out to me at *****kamil.ismayilzade.2016@gmail.com*****
-
 
 ## Screenshots
 
